@@ -243,16 +243,16 @@ export default function EventsPage() {
               </form>
             </div>
 
-            {/* Host an event */}
+            {/* Want to host? */}
             <div className="card-organic bg-white p-6 border border-lichen-cream">
               <h3 className="font-display font-semibold text-deep-forest text-lg mb-2">
-                Host a Reserve Event
+                Want to Host an Event?
               </h3>
               <p className="text-sm text-forest-mid leading-relaxed mb-4">
-                Own or steward a reserve? We can help you organize a volunteer day, workshop, or neighborhood plant swap.
+                Have a space that could host a planting day, workshop, or plant swap? We handle planning, materials, and promotion.
               </p>
-              <Link href="/get-involved/volunteer" className="btn btn-secondary text-sm">
-                Get Started <ArrowRight size={14} />
+              <Link href="/contact" className="btn btn-secondary text-sm">
+                Contact Us <ArrowRight size={14} />
               </Link>
             </div>
 
