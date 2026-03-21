@@ -85,6 +85,8 @@ export default function Footer() {
                 { label: "Run a Fundraiser", href: "/give/fundraisers" },
                 { label: "Fund a New MNR", href: "/give/fund-new-mnr" },
                 { label: "Registry", href: "/give/registry" },
+                { label: "Memorial Giving", href: "/give/memorial" },
+                { label: "Legacy Donation", href: "/give/legacy" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-lichen-cream hover:text-white transition-colors">
@@ -117,6 +119,7 @@ export default function Footer() {
                 { label: "Our Mission", href: "/about/mission" },
                 { label: "Our Team", href: "/about/team" },
                 { label: "Impact & Data", href: "/about/impact" },
+                { label: "Press & Media", href: "/about/press" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>

@@ -17,6 +17,7 @@ const NAV_ITEMS = [
     children: [
       { label: "Find a Chapter", href: "/explore/chapters", icon: Flag, desc: "Local chapters near you" },
       { label: "Find a Reserve", href: "/explore/reserves", icon: MapPin, desc: "Map & profiles of all MNRs" },
+      { label: "Reserve Map", href: "/explore/map", icon: Globe, desc: "Interactive map of all reserves" },
       { label: "Community Events", href: "/explore/events", icon: Calendar, desc: "Attend upcoming events" },
       { label: "Community Nurseries", href: "/explore/nurseries", icon: Leaf, desc: "Local native plant sources" },
       { label: "Programs", href: "/explore/programs", icon: BookOpenCheck, desc: "Our programs & initiatives" },
@@ -29,7 +30,6 @@ const NAV_ITEMS = [
     href: "/get-involved",
     children: [
       { label: "Make a Reserve", href: "/get-involved/make-a-reserve", icon: TreePine, desc: "Turn any space into habitat", highlight: true },
-      { label: "Community Events", href: "/explore/events", icon: Calendar, desc: "Join upcoming events" },
       { label: "MNR Kit Giveaway", href: "/get-involved/mnr-kit", icon: Package, desc: "Get a free MNR starter kit" },
       { label: "Start a Chapter", href: "/get-involved/start-a-chapter", icon: Flag, desc: "Lead a local chapter" },
       { label: "Volunteer", href: "/get-involved/volunteer", icon: Users, desc: "Volunteer or join VeriServe" },
@@ -92,6 +92,7 @@ const NAV_ITEMS = [
       { label: "Our History", href: "/about/history", icon: BookOpen, desc: "How MiniNature started" },
       { label: "Our Team", href: "/about/team", icon: Users, desc: "Staff, board & advisors" },
       { label: "Impact & Data", href: "/about/impact", icon: Globe, desc: "Metrics & outcomes" },
+      { label: "Press & Media", href: "/about/press", icon: Newspaper, desc: "Press kit & media coverage" },
     ],
   },
 ];
