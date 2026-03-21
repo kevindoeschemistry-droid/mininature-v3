@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Get in touch with MiniNature Reserve — general inquiries, media requests, school partnerships, and more.",
 };
-
-const CONTACT_TOPICS = [
-  { value: "general", label: "General Inquiry" },
-  { value: "reserve", label: "Starting a Reserve" },
-  { value: "volunteer", label: "Volunteering" },
-  { value: "school", label: "School Partnership" },
-  { value: "corporate", label: "Corporate Partnership" },
-  { value: "municipal", label: "Municipal Partnership" },
-  { value: "media", label: "Media / Press" },
-  { value: "donate", label: "Donation Question" },
-  { value: "other", label: "Other" },
-];
 
 const QUICK_LINKS = [
   { label: "Make a Reserve", href: "/get-involved/make-a-reserve", emoji: "🌱" },
@@ -53,95 +42,7 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             <h2 className="font-display font-bold text-xl text-deep-forest mb-6">Send a Message</h2>
             <div className="card-organic bg-white p-8">
-              <form className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                      First Name <span className="text-california-poppy">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Your first name"
-                      className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                      Last Name <span className="text-california-poppy">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Your last name"
-                      className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                    Email <span className="text-california-poppy">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="you@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">Phone (optional)</label>
-                  <input
-                    type="tel"
-                    placeholder="(805) 555-1234"
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                    Topic <span className="text-california-poppy">*</span>
-                  </label>
-                  <select
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm bg-white text-deep-forest"
-                  >
-                    <option value="">Select a topic...</option>
-                    {CONTACT_TOPICS.map((t) => (
-                      <option key={t.value} value={t.value}>{t.label}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                    Message <span className="text-california-poppy">*</span>
-                  </label>
-                  <textarea
-                    required
-                    rows={5}
-                    placeholder="Tell us what's on your mind..."
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm resize-none"
-                  />
-                </div>
-
-                {/* Subscribe */}
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" className="accent-reserve-green mt-1" />
-                  <span className="text-sm text-forest-mid">
-                    Subscribe me to the MiniNature Field Notes newsletter (monthly, unsubscribe anytime)
-                  </span>
-                </label>
-
-                <button
-                  type="submit"
-                  className="btn btn-primary w-full justify-center py-3.5 text-base"
-                >
-                  Send Message <ArrowRight size={16} />
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
 

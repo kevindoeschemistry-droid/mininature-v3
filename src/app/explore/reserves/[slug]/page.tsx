@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { RESERVES } from "@/lib/data";
 import { MapPin, Calendar, Leaf, Users, Heart, ArrowRight, ExternalLink, Share2 } from "lucide-react";
 
@@ -59,9 +60,11 @@ export default async function ReserveProfilePage({ params }: Props) {
     <div className="bg-fog-white min-h-screen">
       {/* Hero */}
       <div className="relative h-[55vh] overflow-hidden">
-        <img
+        <Image
           src={reserve.heroPhoto}
           alt={reserve.name}
+          width={1200}
+          height={660}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -158,9 +161,11 @@ export default async function ReserveProfilePage({ params }: Props) {
                 <div className="grid grid-cols-2 gap-4">
                   {reserve.photos.map((photo, i) => (
                     <div key={i} className="rounded-organic overflow-hidden aspect-[4/3]">
-                      <img
+                      <Image
                         src={photo}
                         alt={`${reserve.name} photo ${i + 1}`}
+                        width={600}
+                        height={450}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
                     </div>
@@ -298,9 +303,11 @@ export default async function ReserveProfilePage({ params }: Props) {
                 <Link key={r.id} href={`/explore/reserves/${r.slug}`} className="group block">
                   <div className="card-organic bg-white">
                     <div className="relative h-40 overflow-hidden">
-                      <img
+                      <Image
                         src={r.heroPhoto}
                         alt={r.name}
+                        width={600}
+                        height={160}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>

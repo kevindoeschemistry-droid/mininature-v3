@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Leaf, Users, Heart } from "lucide-react";
 import type { Reserve } from "@/types";
 
@@ -30,9 +31,11 @@ export default function ReserveCard({ reserve, compact = false }: Props) {
       <div className="card-organic bg-white h-full flex flex-col">
         {/* Photo */}
         <div className="relative overflow-hidden" style={{ paddingBottom: compact ? "60%" : "66%" }}>
-          <img
+          <Image
             src={reserve.heroPhoto}
             alt={reserve.name}
+            width={800}
+            height={530}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {/* Type badge */}

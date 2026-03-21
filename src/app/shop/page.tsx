@@ -14,7 +14,47 @@ const PRODUCTS = [
     status: "In stock",
     details: ["Eco-friendly", "100% Cotton"],
     image: "/images/shop-tee-placeholder.svg",
-    href: "https://www.mininature.org/shop#!/Basic-Logo-Tee-Masc-FIt/p/822139005",
+    href: "https://www.mininature.org/shop",
+  },
+  {
+    name: "Basic Logo Tee (Femme Fit)",
+    price: "$25.00",
+    status: "In stock",
+    details: ["Eco-friendly", "100% Cotton", "Slim cut"],
+    image: "/images/shop-tee-placeholder.svg",
+    href: "https://www.mininature.org/shop",
+  },
+  {
+    name: "MiniNature Dad Hat",
+    price: "$22.00",
+    status: "In stock",
+    details: ["Adjustable strap", "Embroidered logo"],
+    image: "/images/shop-tee-placeholder.svg",
+    href: "https://www.mininature.org/shop",
+  },
+  {
+    name: "Sticker Pack (5 Native Plant Designs)",
+    price: "$8.00",
+    status: "In stock",
+    details: ["Weatherproof vinyl", "Local species artwork"],
+    image: "/images/shop-tee-placeholder.svg",
+    href: "https://www.mininature.org/shop",
+  },
+  {
+    name: "Native Plant Seed Kit",
+    price: "$35.00",
+    status: "In stock",
+    details: ["5 native species seed packets", "Planting guide included", "Region-appropriate"],
+    image: "/images/shop-tee-placeholder.svg",
+    href: "https://www.mininature.org/shop",
+  },
+  {
+    name: "MNR Field Notebook",
+    price: "$15.00",
+    status: "Coming soon",
+    details: ["Waterproof pages", "Recycled paper", "Pocket-sized"],
+    image: "/images/shop-tee-placeholder.svg",
+    href: "https://www.mininature.org/shop",
   },
 ];
 
@@ -90,14 +130,20 @@ export default function ShopPage() {
             </a>
           ))}
 
-          {/* Coming Soon placeholder */}
-          <div className="card-organic bg-white border-2 border-dashed border-lichen-cream flex flex-col items-center justify-center p-8 text-center min-h-[360px]">
-            <ShoppingBag size={40} className="text-sage/30 mb-4" />
-            <h3 className="font-display font-semibold text-forest-mid text-base mb-2">More merch coming soon</h3>
-            <p className="text-xs text-forest-mid/60 leading-relaxed max-w-[200px]">
-              Follow us on Instagram for drop announcements and limited-edition gear.
+          {/* Custom Orders CTA */}
+          <Link
+            href="/contact"
+            className="card-organic bg-white border-2 border-dashed border-lichen-cream flex flex-col items-center justify-center p-8 text-center min-h-[360px] group hover:border-reserve-green hover:shadow-lg transition-all"
+          >
+            <ShoppingBag size={40} className="text-sage/30 mb-4 group-hover:text-reserve-green transition-colors" />
+            <h3 className="font-display font-semibold text-deep-forest text-base mb-2 group-hover:text-reserve-green transition-colors">Custom Orders</h3>
+            <p className="text-xs text-forest-mid/60 leading-relaxed max-w-[200px] mb-4">
+              Need bulk merch for your team, event, or school? We can customize orders for groups of 10+.
             </p>
-          </div>
+            <span className="btn btn-secondary text-sm">
+              Get in Touch <ArrowRight size={14} />
+            </span>
+          </Link>
         </div>
       </section>
 

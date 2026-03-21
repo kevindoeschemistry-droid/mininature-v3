@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Check, TreePine, Users, MapPin, BookOpen, Package, QrCode, Heart, Sprout } from "lucide-react";
+import ReserveApplicationForm from "./ReserveApplicationForm";
 
 export const metadata: Metadata = {
   title: "Make a Reserve",
@@ -250,14 +252,18 @@ export default function MakeAReservePage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400"
                 alt="Native plants thriving in an urban reserve"
+                width={400}
+                height={400}
                 className="rounded-organic aspect-square object-cover"
               />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400"
                 alt="Community volunteers planting together"
+                width={400}
+                height={400}
                 className="rounded-organic aspect-square object-cover mt-8"
               />
             </div>
@@ -354,128 +360,7 @@ export default function MakeAReservePage() {
             </p>
           </div>
 
-          <form className="bg-white rounded-organic-lg p-8 shadow-card space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                placeholder="(optional)"
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Space Address / Location *
-              </label>
-              <input
-                type="text"
-                placeholder="Street address or cross streets"
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Approximate Size (sq ft)
-                </label>
-                <input
-                  type="number"
-                  placeholder="e.g. 150"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Space Type
-                </label>
-                <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm bg-white">
-                  <option value="">Select type...</option>
-                  <option>Front yard / parkway</option>
-                  <option>Backyard / side yard</option>
-                  <option>School campus</option>
-                  <option>Community / public space</option>
-                  <option>Corporate / institutional</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Reserve Path Preference
-              </label>
-              <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm bg-white">
-                <option value="">Select path...</option>
-                <option>MNR Kit (free kit, I&apos;ll plant it myself)</option>
-                <option>Community Install Day (volunteers install it)</option>
-                <option>DIY / Guerrilla (using your plant guide)</option>
-                <option>School Reserve</option>
-                <option>Honorary MNR (existing native garden)</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Anything else you&apos;d like to share?
-              </label>
-              <textarea
-                rows={3}
-                placeholder="Tell us about your space, your goals, or what excites you about making a reserve..."
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm resize-none"
-              />
-            </div>
-
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="commit"
-                className="mt-1 accent-reserve-green"
-              />
-              <label htmlFor="commit" className="text-xs text-forest-mid leading-relaxed">
-                I commit to providing basic stewardship for my reserve (watering during establishment, keeping it reasonably tidy) and understand this is a long-term habitat for pollinators and wildlife.
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary w-full justify-center text-base py-4"
-            >
-              Submit My Application
-              <ArrowRight size={18} />
-            </button>
-
-            <p className="text-xs text-center text-forest-mid">
-              We&apos;ll review your application and respond within 3&ndash;5 business days.
-            </p>
-          </form>
+          <ReserveApplicationForm />
         </div>
       </section>
     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Building, CheckCircle, ArrowRight, ClipboardList, Search, Paintbrush, Shovel, HeartHandshake } from "lucide-react";
+import HostInstallationForm from "./HostInstallationForm";
 
 export const metadata: Metadata = {
   title: "Host an MNR Installation",
@@ -165,40 +166,7 @@ export default function HostInstallationPage() {
           <p className="text-forest-mid text-sm mb-8 text-center">
             Tell us about your space and we&apos;ll be in touch within a few days to discuss next steps.
           </p>
-          <form className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Organization Name *</label>
-              <input type="text" required placeholder="e.g. First Lutheran Church of Ventura"
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">Contact Name *</label>
-                <input type="text" required placeholder="Your full name"
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">Email *</label>
-                <input type="email" required placeholder="you@org.com"
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Site Address *</label>
-              <input type="text" required placeholder="Street address, City, CA ZIP"
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Describe Your Space *</label>
-              <textarea required rows={4} placeholder="Tell us about the area — approximate size, sun exposure, current state, and any goals you have."
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green resize-y" />
-            </div>
-            <div className="text-center pt-2">
-              <button type="submit" className="btn btn-primary">
-                Submit Inquiry <ArrowRight size={14} />
-              </button>
-            </div>
-          </form>
+          <HostInstallationForm />
         </div>
       </section>
     </div>

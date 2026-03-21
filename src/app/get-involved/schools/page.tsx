@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { School, Leaf, Users, BookOpen, CheckCircle, ArrowRight, Star } from "lucide-react";
+import SchoolForm from "./SchoolForm";
 
 export const metadata: Metadata = {
   title: "School Programs",
@@ -204,52 +205,7 @@ export default function SchoolsPage() {
               Applications are reviewed on a rolling basis. We prioritize Title I schools and under-resourced districts.
             </p>
           </div>
-          <div className="card-organic bg-white p-8">
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">School Name</label>
-                <input type="text" placeholder="e.g. Fremont Elementary" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">Your Name</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">Role</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm bg-white text-deep-forest">
-                    <option>Teacher</option>
-                    <option>Principal</option>
-                    <option>Curriculum Coordinator</option>
-                    <option>Parent / PTA</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">Email</label>
-                <input type="email" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">Program of Interest</label>
-                <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm bg-white text-deep-forest">
-                  {PROGRAMS.map((p) => (
-                    <option key={p.title}>{p.title}</option>
-                  ))}
-                  <option>Not sure yet — need more info</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Tell us about your school and goals
-                </label>
-                <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm resize-none" />
-              </div>
-              <button type="submit" className="btn btn-primary w-full justify-center py-3 text-base">
-                Submit School Application
-              </button>
-            </form>
-          </div>
+          <SchoolForm />
           <p className="text-center text-xs text-forest-mid mt-4">
             Questions? Email{" "}
             <a href="mailto:info@mininature.org" className="text-reserve-green underline">

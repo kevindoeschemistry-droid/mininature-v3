@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MessageCircle, Mail, Share2, ArrowRight, Bell, Heart, Users, Calendar } from "lucide-react";
 import Link from "next/link";
+import QuickSubscribeSection from "./QuickSubscribeSection";
 
 export const metadata: Metadata = {
   title: "Stay Connected",
@@ -126,33 +127,7 @@ export default function StayConnectedPage() {
       </div>
 
       {/* Inline Newsletter Signup */}
-      <section className="bg-deep-forest text-white py-16">
-        <div className="container-site">
-          <div className="max-w-2xl mx-auto text-center">
-            <span className="text-2xl mb-3 block">📬</span>
-            <h2 className="font-display font-bold text-2xl md:text-3xl mb-3">
-              Quick Subscribe
-            </h2>
-            <p className="text-sage text-sm mb-8">
-              Get our monthly Field Notes newsletter — stories from the reserves, plant spotlights, and upcoming events.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-              <input
-                type="email"
-                required
-                placeholder="you@email.com"
-                className="flex-1 px-4 py-3 rounded-xl border border-sage/30 bg-white/10 text-white placeholder:text-sage/60 outline-none focus:border-sage text-sm"
-              />
-              <button type="submit" className="btn btn-primary py-3 px-6 justify-center">
-                Subscribe <Mail size={14} />
-              </button>
-            </form>
-            <p className="text-sage/60 text-xs mt-4">
-              We never share your email. Unsubscribe anytime.
-            </p>
-          </div>
-        </div>
-      </section>
+      <QuickSubscribeSection />
 
       {/* Why Stay Connected */}
       <section className="container-site py-16">

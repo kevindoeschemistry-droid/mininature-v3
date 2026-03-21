@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Mail, Instagram, Youtube, Leaf, TreePine, Users, Heart, Building, BookOpen } from "lucide-react";
+import NewsletterMiniForm from "@/components/forms/NewsletterMiniForm";
 
 export default function Footer() {
   return (
@@ -153,16 +154,9 @@ export default function Footer() {
               <div className="text-sm font-medium mb-1">Get field notes from the reserves</div>
               <div className="text-xs text-sage">Monthly stories, plant spotlights, and events.</div>
             </div>
-            <form className="flex gap-2 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 md:w-56 px-4 py-2 rounded-full bg-forest-mid text-white placeholder:text-sage text-sm border border-forest-mid focus:border-sage outline-none"
-              />
-              <button type="submit" className="btn btn-primary text-sm shrink-0">
-                Subscribe
-              </button>
-            </form>
+            <div className="w-full md:w-auto md:min-w-[320px]">
+              <NewsletterMiniForm darkMode={true} />
+            </div>
           </div>
         </div>
 

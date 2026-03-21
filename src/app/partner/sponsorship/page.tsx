@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Heart, CheckCircle, ArrowRight, Star } from "lucide-react";
+import SponsorshipForm from "./SponsorshipForm";
 
 export const metadata: Metadata = {
   title: "Sponsorship Opportunities",
@@ -193,46 +194,7 @@ export default function SponsorshipPage() {
             Interested in sponsoring? Let us know about your organization and we&apos;ll send
             over a detailed sponsorship packet.
           </p>
-          <form className="space-y-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">Contact Name *</label>
-                <input type="text" required placeholder="Your full name"
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">Email *</label>
-                <input type="email" required placeholder="you@company.com"
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Organization Name *</label>
-              <input type="text" required placeholder="Your company or organization"
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Interested Tier</label>
-              <select
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest focus:outline-none focus:ring-2 focus:ring-reserve-green">
-                <option value="">Not sure yet</option>
-                <option value="seedling">Seedling ($1,000/yr)</option>
-                <option value="pollinator">Pollinator ($5,000/yr)</option>
-                <option value="habitat-champion">Habitat Champion ($10,000+/yr)</option>
-                <option value="custom">Custom / Multi-Year</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1">Message</label>
-              <textarea rows={4} placeholder="Tell us about your organization's sustainability goals or any questions about sponsorship."
-                className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green resize-y" />
-            </div>
-            <div className="text-center pt-2">
-              <button type="submit" className="btn btn-primary">
-                Send Inquiry <ArrowRight size={14} />
-              </button>
-            </div>
-          </form>
+          <SponsorshipForm />
         </div>
       </section>
     </div>

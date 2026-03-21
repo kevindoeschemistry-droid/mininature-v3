@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Building2, TreePine, Megaphone, ArrowRight, CheckCircle, Star } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -126,8 +127,7 @@ export default function PartnerPage() {
               const inner = (
                 <div className="flex flex-col items-center justify-center gap-2 w-36 h-20">
                   {p.img ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={p.img} alt={p.name} className="max-h-10 max-w-[120px] w-auto object-contain" style={p.darken ? {filter: "brightness(0)"} : undefined} />
+                    <Image src={p.img} alt={p.name} width={120} height={40} className="max-h-10 max-w-[120px] w-auto object-contain" style={p.darken ? {filter: "brightness(0)"} : undefined} />
                   ) : (
                     <span className="text-3xl">{p.emoji}</span>
                   )}

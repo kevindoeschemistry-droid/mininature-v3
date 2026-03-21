@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, ArrowRight, BookOpen, Sprout, Calendar, Users, Sun, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Join Our Newsletter",
@@ -13,14 +14,6 @@ const NEWSLETTER_CONTENT = [
   { emoji: "📅", icon: Calendar, title: "Upcoming Events", description: "Planting days, workshops, volunteer opportunities, and community gatherings across the county." },
   { emoji: "🤝", icon: Users, title: "Volunteer Spotlights", description: "Celebrating the people who make MiniNature possible — their stories, impact, and advice for newcomers." },
   { emoji: "☀️", icon: Sun, title: "Seasonal Growing Tips", description: "What to plant, prune, water, and watch for each month in our Mediterranean climate." },
-];
-
-const INTEREST_OPTIONS = [
-  { value: "events", label: "Events" },
-  { value: "plant-tips", label: "Plant Tips" },
-  { value: "volunteer", label: "Volunteer Ops" },
-  { value: "stories", label: "Stories" },
-  { value: "all", label: "All of the Above" },
 ];
 
 const PAST_ISSUES = [
@@ -129,62 +122,7 @@ export default function NewsletterPage() {
             Subscribe to Field Notes
           </h2>
           <div className="max-w-xl mx-auto">
-            <div className="card-organic bg-white p-8 border border-lichen-cream">
-              <form className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                    Email <span className="text-california-poppy">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="you@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your first name"
-                    className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-deep-forest placeholder:text-forest-mid/40 text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-3">
-                    Interests
-                  </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {INTEREST_OPTIONS.map((opt) => (
-                      <label key={opt.value} className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="checkbox"
-                          name="interests"
-                          value={opt.value}
-                          className="accent-reserve-green"
-                        />
-                        <span className="text-sm text-forest-mid">{opt.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <button type="submit" className="btn btn-primary w-full justify-center py-3.5 text-base">
-                  Subscribe to Field Notes <Mail size={16} />
-                </button>
-              </form>
-
-              <div className="flex items-start gap-2 mt-5 pt-5 border-t border-lichen-cream">
-                <CheckCircle size={14} className="text-sage shrink-0 mt-0.5" />
-                <p className="text-xs text-forest-mid leading-relaxed">
-                  We never share your email. Unsubscribe anytime with one click. We send one email per month — no spam, ever.
-                </p>
-              </div>
-            </div>
+            <NewsletterForm />
           </div>
         </section>
 

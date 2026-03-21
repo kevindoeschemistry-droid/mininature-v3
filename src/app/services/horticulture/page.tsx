@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Sprout, ArrowRight, CheckCircle, Send } from "lucide-react";
+import ContractGrowingForm from "./ContractGrowingForm";
 
 export const metadata: Metadata = {
   title: "Contract Growing & Horticultural Services",
@@ -227,69 +228,7 @@ export default function HorticulturePage() {
             Tell us what you need and we&apos;ll put together a growing proposal
             with timeline and pricing.
           </p>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Organization
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="Your organization"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Contact Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="Your name"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="you@org.com"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Service Type
-                </label>
-                <select className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-hummingbird-gold">
-                  <option value="">Select a service</option>
-                  <option value="contract-growing">Contract Growing</option>
-                  <option value="seed-collection">Seed Collection</option>
-                  <option value="propagation">Propagation Services</option>
-                  <option value="plant-sourcing">Plant Sourcing</option>
-                  <option value="plant-palette">Plant Palette Design</option>
-                  <option value="multiple">Multiple Services</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                Project Details
-              </label>
-              <textarea
-                rows={4}
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                placeholder="Describe species needed, quantities, container sizes, timeline, and project location..."
-              />
-            </div>
-            <button type="submit" className="btn btn-primary w-full justify-center">
-              Submit Inquiry <ArrowRight size={14} />
-            </button>
-          </form>
+          <ContractGrowingForm />
         </div>
       </section>
     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PenLine, ArrowRight, Clock, Tag } from "lucide-react";
+import BlogNewsletter from "./BlogNewsletter";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -219,25 +220,7 @@ export default function BlogPage() {
           {/* Sidebar */}
           <aside className="lg:w-72 shrink-0 space-y-8">
             {/* Newsletter signup */}
-            <div className="card-organic bg-white p-6 border border-lichen-cream">
-              <h3 className="font-display font-semibold text-lg text-deep-forest mb-2">
-                📬 Stay in the Loop
-              </h3>
-              <p className="text-sm text-forest-mid leading-relaxed mb-4">
-                Get monthly field notes, plant spotlights, and community updates delivered to your
-                inbox.
-              </p>
-              <form className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  className="w-full text-sm px-3 py-2.5 rounded-lg border border-lichen-cream bg-fog-white focus:outline-none focus:ring-2 focus:ring-reserve-green focus:border-transparent"
-                />
-                <button type="submit" className="btn btn-primary w-full text-sm">
-                  Subscribe
-                </button>
-              </form>
-            </div>
+            <BlogNewsletter />
 
             {/* Popular tags */}
             <div className="card-organic bg-white p-6 border border-lichen-cream">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, ArrowRight, Clock, Users, Calendar, Send } from "lucide-react";
+import EducationBookingForm from "./EducationBookingForm";
 
 export const metadata: Metadata = {
   title: "Book an Educational Activity",
@@ -200,111 +201,7 @@ export default function EducationPage() {
             Fill out the form below and we&apos;ll follow up within a few days
             to confirm your activity.
           </p>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Organization / School
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="Your organization"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Contact Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="Your name"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="you@org.com"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="(805) 555-0100"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                Activity Type
-              </label>
-              <select className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-hummingbird-gold">
-                <option value="">Select an activity</option>
-                <option value="plant-walk">Native Plant ID Walk</option>
-                <option value="pollinator">Pollinator Workshop</option>
-                <option value="seed-saving">Seed Saving Class</option>
-                <option value="school-garden">School Garden Installation</option>
-                <option value="planting-day">Community Planting Day</option>
-                <option value="indigenous">Indigenous Plant Knowledge Session</option>
-                <option value="custom">Custom Program</option>
-              </select>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Preferred Date
-                </label>
-                <input
-                  type="date"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Group Size
-                </label>
-                <input
-                  type="number"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="e.g. 25"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Age Range
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="e.g. 8–12 years"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                Additional Details
-              </label>
-              <textarea
-                rows={3}
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                placeholder="Any specific goals, accessibility needs, or location preferences..."
-              />
-            </div>
-            <button type="submit" className="btn btn-primary w-full justify-center">
-              Submit Booking Request <ArrowRight size={14} />
-            </button>
-          </form>
+          <EducationBookingForm />
         </div>
       </section>
     </div>

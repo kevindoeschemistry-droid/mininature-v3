@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GraduationCap, CheckCircle, ArrowRight, Clock, Star, BookOpen } from "lucide-react";
+import TrainingForm from "./TrainingForm";
 
 export const metadata: Metadata = {
   title: "Reservist Training",
@@ -207,43 +208,7 @@ export default function TrainingPage() {
               Free. Open to all. No prior experience required — just commitment and curiosity.
             </p>
           </div>
-          <div className="card-organic bg-white p-8">
-            <form className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">First Name</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1.5">Last Name</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">Email</label>
-                <input type="email" className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">How did you hear about us?</label>
-                <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm text-deep-forest bg-white">
-                  <option>Social media (Instagram/Facebook)</option>
-                  <option>Friend or neighbor</option>
-                  <option>Attended a MiniNature event</option>
-                  <option>Newsletter</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Why do you want to become a Reservist?
-                </label>
-                <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-reserve-green outline-none text-sm resize-none" />
-              </div>
-              <button type="submit" className="btn btn-primary w-full justify-center py-3 text-base">
-                Submit Application
-              </button>
-            </form>
-          </div>
+          <TrainingForm />
           <p className="text-center text-xs text-forest-mid mt-4">
             Questions? <Link href="/contact" className="text-reserve-green underline">Contact us</Link>
           </p>

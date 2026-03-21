@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, Calendar, MapPin, Users, Leaf, Star, ArrowRight, Heart } from "lucide-react";
+import WorkshopNewsletter from "./WorkshopNewsletter";
 
 export const metadata: Metadata = {
   title: "Indigenous Knowledge",
@@ -244,24 +245,7 @@ export default function IndigenousKnowledgePage() {
             </div>
 
             {/* Newsletter */}
-            <div className="card-organic bg-lichen-cream border border-sage/20 p-6">
-              <h3 className="font-display font-semibold text-deep-forest text-base mb-2">
-                Workshop Reminders
-              </h3>
-              <p className="text-xs text-forest-mid leading-relaxed mb-3">
-                Get notified when new workshops are added.
-              </p>
-              <form className="space-y-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-2 rounded-full bg-white text-deep-forest placeholder:text-forest-mid text-sm border border-sage/30 focus:border-reserve-green outline-none"
-                />
-                <button type="submit" className="btn btn-primary w-full text-sm">
-                  Notify Me
-                </button>
-              </form>
-            </div>
+            <WorkshopNewsletter />
           </div>
         </div>
       </div>

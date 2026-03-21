@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Flag, Calendar, Users, Megaphone, BookOpen, Check, MapPin } from "lucide-react";
+import ChapterApplicationForm from "./ChapterApplicationForm";
 
 export const metadata: Metadata = {
   title: "Start a Chapter",
@@ -328,100 +329,7 @@ export default function StartAChapterPage() {
             </p>
           </div>
 
-          <form className="bg-white rounded-organic-lg p-8 shadow-card space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                City / Region *
-              </label>
-              <input
-                type="text"
-                placeholder="e.g. East Ventura, Oxnard, Ojai"
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                How many founding members do you have? *
-              </label>
-              <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm bg-white">
-                <option value="">Select...</option>
-                <option>Just me so far</option>
-                <option>2 people</option>
-                <option>3-5 people</option>
-                <option>6-10 people</option>
-                <option>10+ people</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Why do you want to start a chapter? *
-              </label>
-              <textarea
-                rows={5}
-                placeholder="Tell us about your connection to native plants, your community, and what you hope to accomplish as a chapter leader..."
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm resize-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Relevant Experience (optional)
-              </label>
-              <textarea
-                rows={3}
-                placeholder="Any gardening, organizing, teaching, or community leadership experience..."
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm resize-none"
-              />
-            </div>
-
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="chapter-commit"
-                className="mt-1 accent-reserve-green"
-              />
-              <label htmlFor="chapter-commit" className="text-xs text-forest-mid leading-relaxed">
-                I understand that chapter leadership requires an ongoing commitment of approximately 5&ndash;10 hours per month and I am ready to take on that responsibility.
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary w-full justify-center text-base py-4"
-            >
-              Submit Chapter Application
-              <ArrowRight size={18} />
-            </button>
-
-            <p className="text-xs text-center text-forest-mid">
-              We&apos;ll review your application and schedule an introductory call within 1&ndash;2 weeks.
-            </p>
-          </form>
+          <ChapterApplicationForm />
         </div>
       </section>
 

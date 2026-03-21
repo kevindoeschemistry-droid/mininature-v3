@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Package, Check, Sun, Ruler, Leaf, Calendar, MapPin, HelpCircle, ChevronDown } from "lucide-react";
+import KitRequestForm from "./KitRequestForm";
 
 export const metadata: Metadata = {
   title: "MNR Kit Giveaway",
@@ -309,9 +311,11 @@ export default function MNRKitPage() {
               { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400", alt: "Established native plant garden" },
             ].map((photo) => (
               <div key={photo.alt} className="aspect-square rounded-organic overflow-hidden">
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -366,115 +370,7 @@ export default function MNRKitPage() {
             </p>
           </div>
 
-          <form className="bg-white rounded-organic-lg p-8 shadow-card space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Space Address *
-              </label>
-              <input
-                type="text"
-                placeholder="Street address where you want to plant"
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Approximate Space Size (sq ft) *
-                </label>
-                <input
-                  type="number"
-                  placeholder="e.g. 100"
-                  className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                  Space Type *
-                </label>
-                <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm bg-white">
-                  <option value="">Select type...</option>
-                  <option>Parkway / sidewalk strip</option>
-                  <option>Front yard</option>
-                  <option>Side yard</option>
-                  <option>Backyard</option>
-                  <option>Community / shared space</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Sun Exposure
-              </label>
-              <select className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm bg-white">
-                <option value="">Select exposure...</option>
-                <option>Full sun (6+ hours)</option>
-                <option>Partial sun (4-6 hours)</option>
-                <option>Partial shade (2-4 hours)</option>
-                <option>Not sure</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-deep-forest mb-1.5">
-                Anything else we should know?
-              </label>
-              <textarea
-                rows={3}
-                placeholder="Soil type, existing plants, any preferences for plant species..."
-                className="w-full px-4 py-3 rounded-xl border border-lichen-cream focus:border-sage focus:outline-none text-sm resize-none"
-              />
-            </div>
-
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="kit-commit"
-                className="mt-1 accent-reserve-green"
-              />
-              <label htmlFor="kit-commit" className="text-xs text-forest-mid leading-relaxed">
-                I understand that I will need to provide basic watering during the first growing season and will follow the care calendar included with the kit.
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary w-full justify-center text-base py-4"
-            >
-              Request My Free Kit
-              <ArrowRight size={18} />
-            </button>
-
-            <p className="text-xs text-center text-forest-mid">
-              We&apos;ll review your application and schedule a site assessment within 1&ndash;2 weeks.
-            </p>
-          </form>
+          <KitRequestForm />
         </div>
       </section>
 

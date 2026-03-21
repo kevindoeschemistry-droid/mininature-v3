@@ -10,6 +10,7 @@ import {
   DollarSign,
   Send,
 } from "lucide-react";
+import MunicipalInquiryForm from "./MunicipalInquiryForm";
 
 export const metadata: Metadata = {
   title: "Municipal Services",
@@ -227,79 +228,7 @@ export default function MunicipalitiesPage() {
             Let&apos;s discuss how native habitat can benefit your city. We&apos;ll
             schedule a no-obligation site walk to explore possibilities.
           </p>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  City / Agency Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="e.g. City of Ventura"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Department
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="e.g. Parks & Recreation"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Contact Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                  placeholder="you@city.gov"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                Services of Interest
-              </label>
-              <select className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-hummingbird-gold">
-                <option value="">Select a service area</option>
-                <option value="row">Public Right-of-Way Plantings</option>
-                <option value="park">Park Restoration</option>
-                <option value="median">Median Beautification</option>
-                <option value="stormwater">Stormwater Management</option>
-                <option value="heat">Urban Heat Island Mitigation</option>
-                <option value="multiple">Multiple Services</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-mono-accent uppercase tracking-widest text-sage mb-1">
-                Project Details
-              </label>
-              <textarea
-                rows={4}
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-sage/60 focus:outline-none focus:ring-2 focus:ring-hummingbird-gold"
-                placeholder="Tell us about the sites you're considering, budget timeline, and any specific goals..."
-              />
-            </div>
-            <button type="submit" className="btn btn-primary w-full justify-center">
-              Submit Inquiry <ArrowRight size={14} />
-            </button>
-          </form>
+          <MunicipalInquiryForm />
         </div>
       </section>
     </div>

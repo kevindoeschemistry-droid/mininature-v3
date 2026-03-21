@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const PILLARS = [
@@ -97,9 +98,11 @@ export default function PillarsSection() {
 
           {/* Image */}
           <div className="rounded-organic-lg overflow-hidden h-72 lg:h-[400px] shadow-card">
-            <img
+            <Image
               src={pillar.image}
               alt={pillar.headline}
+              width={800}
+              height={400}
               className="w-full h-full object-cover"
             />
           </div>

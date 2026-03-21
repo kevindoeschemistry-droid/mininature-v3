@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Newspaper, Tag, ArrowRight, Clock } from "lucide-react";
+import StoriesNewsletter from "./StoriesNewsletter";
 
 export const metadata: Metadata = {
   title: "Stories & News",
@@ -137,10 +139,11 @@ export default function StoriesPage() {
             {/* Featured */}
             <div className="card-organic bg-white overflow-hidden group">
               <div className="relative h-64 overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={FEATURED_STORY.image}
                   alt={FEATURED_STORY.title}
+                  width={900}
+                  height={256}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -181,10 +184,11 @@ export default function StoriesPage() {
               {STORIES.map((story) => (
                 <div key={story.id} className="card-organic bg-white overflow-hidden group cursor-pointer">
                   <div className="relative h-40 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={story.image}
                       alt={story.title}
+                      width={600}
+                      height={160}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -215,25 +219,7 @@ export default function StoriesPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Newsletter */}
-            <div className="card-organic bg-reserve-green text-white p-6">
-              <Newspaper size={20} className="text-sage mb-3" />
-              <h3 className="font-display font-semibold text-lg mb-2">
-                Field Notes Newsletter
-              </h3>
-              <p className="text-sage text-sm leading-relaxed mb-4">
-                Monthly stories, plant spotlights, and event highlights delivered to your inbox.
-              </p>
-              <form className="space-y-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-2 rounded-full bg-forest-mid text-white placeholder:text-sage text-sm border border-forest-mid focus:border-sage outline-none"
-                />
-                <button type="submit" className="btn btn-primary w-full text-sm">
-                  Subscribe Free
-                </button>
-              </form>
-            </div>
+            <StoriesNewsletter />
 
             {/* Contribute */}
             <div className="card-organic bg-white border border-lichen-cream p-6">

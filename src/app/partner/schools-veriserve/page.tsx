@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GraduationCap, CheckCircle, ArrowRight, ClipboardCheck, UserPlus, Rocket } from "lucide-react";
+import SchoolEnrollmentForm from "./SchoolEnrollmentForm";
 
 export const metadata: Metadata = {
   title: "Get Your School on VeriServe",
@@ -156,54 +157,7 @@ export default function SchoolsVeriservePage() {
             <p className="text-forest-mid text-sm mb-8 text-center">
               Fill out the form and we&apos;ll get your school set up on VeriServe within one week.
             </p>
-            <form className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">School Name *</label>
-                <input type="text" required placeholder="e.g. Buena High School"
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Contact Person *</label>
-                  <input type="text" required placeholder="Teacher or counselor name"
-                    className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Email *</label>
-                  <input type="email" required placeholder="contact@school.edu"
-                    className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Your Role *</label>
-                  <select required
-                    className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest focus:outline-none focus:ring-2 focus:ring-reserve-green">
-                    <option value="">Select role</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="counselor">Counselor</option>
-                    <option value="administrator">Administrator</option>
-                    <option value="club-advisor">Club Advisor</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Estimated # of Students</label>
-                  <input type="number" min={1} placeholder="e.g. 30"
-                    className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-deep-forest mb-1">Anything else?</label>
-                <textarea rows={3} placeholder="Any questions or context about your school's community service program."
-                  className="w-full rounded-xl border border-lichen-cream bg-white px-4 py-3 text-sm text-deep-forest placeholder:text-sage focus:outline-none focus:ring-2 focus:ring-reserve-green resize-y" />
-              </div>
-              <div className="text-center pt-2">
-                <button type="submit" className="btn btn-primary">
-                  Enroll School <ArrowRight size={14} />
-                </button>
-              </div>
-            </form>
+            <SchoolEnrollmentForm />
           </div>
         </div>
       </section>
