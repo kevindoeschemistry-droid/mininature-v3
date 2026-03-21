@@ -37,28 +37,17 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Partner",
+    label: "Partner & Services",
     href: "/partner",
     children: [
       { label: "Host an MNR Installation", href: "/partner/host-installation", icon: Building, desc: "Bring an MNR to your space" },
-      { label: "Honorary MNR Status", href: "/partner/honorary-status", icon: Award, desc: "Apply for honorary status" },
       { label: "Sponsorship Opportunities", href: "/partner/sponsorship", icon: Handshake, desc: "Sponsor reserves & programs" },
       { label: "Schools on VeriServe", href: "/partner/schools-veriserve", icon: School, desc: "Get your school involved" },
       { label: "1% for the Planet", href: "/partner/one-percent", icon: Percent, desc: "Join the 1% commitment" },
-      { label: "Other Partnerships", href: "/partner/other", icon: Globe, desc: "Explore more ways to partner" },
-    ],
-  },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
+      { label: "Other Partnerships", href: "/partner/other", icon: Globe, desc: "More ways to partner" },
       { label: "Landscaping", href: "/services/landscaping", icon: Sprout, desc: "Design, install & maintain MNRs" },
       { label: "For Municipalities", href: "/services/municipalities", icon: Landmark, desc: "City & public land services" },
-      { label: "Educational Activities", href: "/services/education", icon: GraduationCap, desc: "Book a learning experience" },
-      { label: "Contract Growing", href: "/services/horticulture", icon: FlowerIcon, desc: "Growing & horticultural services" },
-      { label: "Trail Maintenance", href: "/services/trail-maintenance", icon: HardHat, desc: "Trail upkeep & restoration" },
-      { label: "Weed Abatement", href: "/services/weed-abatement", icon: Scissors, desc: "Invasive species management" },
-      { label: "Consulting", href: "/services/consulting", icon: MessageSquare, desc: "Expert guidance & planning" },
+      { label: "All Services", href: "/services", icon: Wrench, desc: "Education, consulting & more" },
     ],
   },
   {
@@ -75,24 +64,16 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Stay Connected",
-    href: "/stay-connected",
-    children: [
-      { label: "Join our Newsletter", href: "/stay-connected/newsletter", icon: Mail, desc: "Monthly stories & updates" },
-      { label: "Join our Discord", href: "/stay-connected/discord", icon: MessageCircle, desc: "Chat with the community" },
-      { label: "Social Media", href: "/stay-connected/social", icon: Share2, desc: "Follow us everywhere" },
-    ],
-  },
-  {
     label: "About",
     href: "/about",
     children: [
       { label: "Our Mission", href: "/about/mission", icon: Leaf, desc: "What we stand for" },
-      { label: "Native Plants", href: "/about/native-plants", icon: TreePine, desc: "Species guide & ecology" },
-      { label: "Our History", href: "/about/history", icon: BookOpen, desc: "How MiniNature started" },
       { label: "Our Team", href: "/about/team", icon: Users, desc: "Staff, board & advisors" },
       { label: "Impact & Data", href: "/about/impact", icon: Globe, desc: "Metrics & outcomes" },
       { label: "Press & Media", href: "/about/press", icon: Newspaper, desc: "Press kit & media coverage" },
+      { label: "Newsletter", href: "/stay-connected/newsletter", icon: Mail, desc: "Monthly stories & updates" },
+      { label: "Discord", href: "/stay-connected/discord", icon: MessageCircle, desc: "Chat with the community" },
+      { label: "Social Media", href: "/stay-connected/social", icon: Share2, desc: "Follow us everywhere" },
     ],
   },
 ];
