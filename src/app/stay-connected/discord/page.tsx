@@ -141,7 +141,7 @@ export default function DiscordPage() {
               of people who care about native plants and urban habitat restoration.
             </p>
             <a
-              href="https://discord.gg/mininature"
+              href="https://discord.gg/y6YzU6H3Gm"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary text-base py-3.5 px-8 justify-center inline-flex"

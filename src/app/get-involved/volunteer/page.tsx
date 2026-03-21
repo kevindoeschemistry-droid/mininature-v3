@@ -82,7 +82,7 @@ const UPCOMING = [
   },
 ];
 
-const VERISERVE_URL = "https://veriserve-v2.vercel.app/";
+const VERISERVE_URL = "https://veriserve.kevindoeschemistry.com/";
 
 export default function VolunteerPage() {
   return (
