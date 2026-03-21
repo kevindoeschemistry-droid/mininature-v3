@@ -53,10 +53,10 @@ const GIVING_OPTIONS = [
   },
   {
     emoji: "🌳",
-    title: "Legacy Donation",
+    title: "Memorial & Legacy",
     description:
-      "Include MiniNature in your estate plan with a bequest, beneficiary designation, or charitable trust.",
-    href: "/give/legacy",
+      "Honor a loved one or include MiniNature in your estate plan with a bequest, beneficiary designation, or charitable trust.",
+    href: "/give/memorial",
   },
 ];
 

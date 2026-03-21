@@ -13,8 +13,8 @@ const SECTIONS = [
     color: "bg-reserve-green",
     title: "Find a Reserve",
     description: "Interactive map of all 21 active MiniNature Reserves. Filter by type, adoption availability, and location.",
-    href: "/explore/map",
-    cta: "Open the Map",
+    href: "/explore/reserves",
+    cta: "Browse Reserves",
   },
   {
     icon: Leaf,
@@ -35,10 +35,10 @@ const SECTIONS = [
   {
     icon: BookOpen,
     color: "bg-hummingbird-gold",
-    title: "Indigenous Knowledge",
-    description: "Chumash heritage workshops, native plant cooking classes, and traditional ecological knowledge — open to all.",
-    href: "/explore/indigenous-knowledge",
-    cta: "Explore Workshops",
+    title: "Programs",
+    description: "Our programs and initiatives including workshops, indigenous knowledge, and community education.",
+    href: "/explore/programs",
+    cta: "View Programs",
   },
   {
     icon: Leaf,
@@ -51,10 +51,10 @@ const SECTIONS = [
   {
     icon: Newspaper,
     color: "bg-deep-forest",
-    title: "Stories & News",
+    title: "Blog",
     description: "Field notes, plant spotlights, community stories, and press coverage from the MiniNature network.",
-    href: "/explore/stories",
-    cta: "Read Stories",
+    href: "/explore/blog",
+    cta: "Read Blog",
   },
 ];
 

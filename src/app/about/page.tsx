@@ -26,14 +26,14 @@ const SECTIONS = [
     icon: Leaf,
     title: "Our History",
     description: "From a single parkway strip in 2021 to 21 reserves across 3 cities — the story so far.",
-    href: "/about/history",
+    href: "/about",
     color: "bg-california-poppy",
   },
   {
     icon: BookOpen,
     title: "Native Plants",
     description: "A guide to the California native species we plant and why each one matters.",
-    href: "/about/native-plants",
+    href: "/about",
     color: "bg-sage",
   },
   {

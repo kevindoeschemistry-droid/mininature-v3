@@ -1,35 +1,62 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Heart, Leaf } from "lucide-react";
+import { ArrowRight, Heart, Leaf, Shield, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Memorial Giving",
+  title: "Memorial & Legacy Giving",
   description:
-    "Honor a loved one with a gift that plants native habitat in their memory. A living tribute that grows for years to come.",
+    "Honor a loved one with a native plant dedication or include MiniNature Reserve in your estate plan. Create a lasting impact for generations.",
 };
 
 const WHAT_FAMILY_RECEIVES = [
   {
-    emoji: "💌",
+    emoji: "\u{1F48C}",
     title: "Personalized Card",
     description:
       "A hand-designed card sent to the honoree's family, sharing that a gift has been made in their loved one's memory.",
   },
   {
-    emoji: "📸",
+    emoji: "\u{1F4F8}",
     title: "Photo of Planted Species",
     description:
       "A photograph of the native plants dedicated in their honor, showing exactly what is growing in their name.",
   },
   {
-    emoji: "🗺️",
+    emoji: "\u{1F5FA}\u{FE0F}",
     title: "Map Location",
     description:
       "A digital map showing the exact location of the dedicated plants within a MiniNature Reserve.",
   },
 ];
 
-export default function MemorialPage() {
+const LEGACY_GIFT_TYPES = [
+  {
+    emoji: "\u{1F4DC}",
+    title: "Bequest in Your Will",
+    description:
+      "Include MiniNature Reserve in your will or living trust. A bequest can be a specific dollar amount, a percentage of your estate, or the remainder after other gifts are fulfilled.",
+  },
+  {
+    emoji: "\u{1F4B0}",
+    title: "Retirement Account Beneficiary",
+    description:
+      "Name MiniNature Reserve as a beneficiary of your IRA, 401(k), or other retirement account. This is one of the most tax-efficient ways to make a lasting gift.",
+  },
+  {
+    emoji: "\u{1F6E1}\u{FE0F}",
+    title: "Life Insurance Beneficiary",
+    description:
+      "Designate MiniNature Reserve as a beneficiary of a life insurance policy. You can donate an existing policy or name us as a partial or full beneficiary.",
+  },
+  {
+    emoji: "\u{2764}\u{FE0F}",
+    title: "Donor-Advised Fund",
+    description:
+      "Recommend a grant from your donor-advised fund to support native habitat restoration. DAF gifts are a simple, flexible way to give from your charitable fund.",
+  },
+];
+
+export default function MemorialAndLegacyPage() {
   return (
     <div className="bg-fog-white min-h-screen">
       {/* Hero */}
@@ -41,22 +68,26 @@ export default function MemorialPage() {
               Honor &amp; Remember
             </div>
             <h1 className="font-display font-bold text-4xl md:text-5xl mb-5 leading-tight">
-              A Living Tribute
+              Memorial &amp; Legacy Giving
             </h1>
             <p className="text-sage text-lg leading-relaxed">
-              Honor someone special with a gift that grows. Your memorial
-              donation plants native species that create lasting habitat —
-              attracting hummingbirds, butterflies, and bees in their name.
+              Honor someone special with a gift that grows, or create a lasting
+              legacy by including MiniNature Reserve in your estate plan. Every
+              gift plants native habitat that supports wildlife for generations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* How it works */}
+      {/* ── MEMORIAL GIVING ── */}
       <section className="container-site py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-display font-bold text-2xl text-deep-forest mb-3 text-center">
-            How Memorial Giving Works
+          <div className="flex items-center gap-2 text-xs font-mono-accent uppercase tracking-widest text-reserve-green mb-3 justify-center">
+            <Heart size={12} />
+            Memorial Giving
+          </div>
+          <h2 className="font-display font-bold text-2xl md:text-3xl text-deep-forest mb-3 text-center">
+            A Living Tribute
           </h2>
           <p className="text-center text-forest-mid mb-10 leading-relaxed max-w-xl mx-auto">
             When you make a memorial donation, we plant native California
@@ -74,7 +105,7 @@ export default function MemorialPage() {
               {
                 num: "2",
                 title: "We Plant",
-                desc: "We dedicate native plants at a reserve in their honor — species that support local wildlife.",
+                desc: "We dedicate native plants at a reserve in their honor \u2014 species that support local wildlife.",
               },
               {
                 num: "3",
@@ -257,6 +288,107 @@ export default function MemorialPage() {
         </div>
       </section>
 
+      {/* ── PLANNED GIVING / LEGACY ── */}
+      <section className="bg-deep-forest text-white py-16">
+        <div className="container-site">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-2 text-xs font-mono-accent uppercase tracking-widest text-sage mb-3 justify-center">
+              <Leaf size={12} />
+              Planned Giving
+            </div>
+            <h2 className="font-display font-bold text-2xl md:text-3xl mb-3 text-center">
+              Include MiniNature in Your Estate Plan
+            </h2>
+            <p className="text-sage text-center leading-relaxed max-w-xl mx-auto mb-12">
+              A planned gift ensures that native habitat restoration continues
+              for generations. There are several flexible ways to leave a
+              lasting legacy through your estate.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {LEGACY_GIFT_TYPES.map((gift) => (
+                <div
+                  key={gift.title}
+                  className="card-organic bg-forest-mid/20 border border-forest-mid/30 p-6"
+                >
+                  <span className="text-3xl block mb-3">{gift.emoji}</span>
+                  <h3 className="font-display font-semibold text-white text-lg mb-2">
+                    {gift.title}
+                  </h3>
+                  <p className="text-sage text-sm leading-relaxed">
+                    {gift.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Heritage Circle */}
+      <section className="bg-lichen-cream py-16">
+        <div className="container-site max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="w-14 h-14 rounded-full bg-deep-forest text-white flex items-center justify-center mx-auto mb-4">
+              <Star size={24} />
+            </div>
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-deep-forest mb-3">
+              The Heritage Circle
+            </h2>
+            <p className="text-forest-mid leading-relaxed max-w-xl mx-auto">
+              The Heritage Circle honors those who have included MiniNature
+              Reserve in their estate plans. Members receive special recognition
+              and a deeper connection to our mission.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                emoji: "\u{1F333}",
+                title: "Name on the Legacy Wall",
+                desc: "Permanent recognition at our flagship reserve, honoring your commitment to future generations of native habitat.",
+              },
+              {
+                emoji: "\u{1F4E8}",
+                title: "Annual Impact Report",
+                desc: "A personalized report sharing how legacy gifts are funding new reserves, restoration projects, and community programs.",
+              },
+              {
+                emoji: "\u{1F331}",
+                title: "Exclusive Events",
+                desc: "Invitations to Heritage Circle gatherings, behind-the-scenes reserve tours, and conversations with our conservation team.",
+              },
+            ].map((perk) => (
+              <div
+                key={perk.title}
+                className="card-organic bg-white p-6 border border-lichen-cream text-center"
+              >
+                <span className="text-3xl block mb-3">{perk.emoji}</span>
+                <h3 className="font-display font-semibold text-deep-forest mb-2">
+                  {perk.title}
+                </h3>
+                <p className="text-sm text-forest-mid leading-relaxed">
+                  {perk.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <p className="text-forest-mid text-sm leading-relaxed max-w-lg mx-auto mb-6">
+              Interested in joining the Heritage Circle? We would love to talk
+              with you about how a planned gift can align with your values and
+              financial goals.
+            </p>
+            <Link
+              href="/about/contact"
+              className="btn btn-primary inline-flex items-center gap-2"
+            >
+              <Shield size={16} />
+              Contact Us About Legacy Giving
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* A living legacy */}
       <section className="bg-mint-mist py-16">
         <div className="container-site max-w-2xl mx-auto text-center">
@@ -274,10 +406,10 @@ export default function MemorialPage() {
             provides shelter for native bees and lizards.
           </p>
           <p className="text-forest-mid leading-relaxed">
-            When you plant in someone&apos;s memory, you create a living
-            ecosystem that grows, evolves, and supports wildlife for decades.
-            It is a tribute that breathes, blooms, and gives back to the
-            community every single day.
+            When you plant in someone&apos;s memory or include MiniNature in
+            your estate plan, you create a living ecosystem that grows, evolves,
+            and supports wildlife for decades. It is a tribute that breathes,
+            blooms, and gives back to the community every single day.
           </p>
         </div>
       </section>

@@ -69,7 +69,7 @@ const RESERVE_PATHS = [
     description: "Create a school campus reserve with curriculum support, biodiversity tracking tools, and a dedicated student volunteer program.",
     requirements: "Campus space · Teacher sponsor · School enrollment",
     cta: "Start a School Reserve",
-    href: "/get-involved/schools",
+    href: "/partner/schools-veriserve",
   },
 ];
 

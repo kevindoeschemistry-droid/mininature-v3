@@ -70,9 +70,9 @@ export default function HeroSection() {
 
         {/* CTA cluster */}
         <div className="flex flex-wrap gap-3">
-          <Link href="/explore/map" className="btn btn-primary text-base px-6 py-3">
+          <Link href="/explore/reserves" className="btn btn-primary text-base px-6 py-3">
             <MapPin size={18} />
-            Explore the Map
+            Explore Reserves
           </Link>
           <Link href="/get-involved/make-a-reserve" className="btn btn-outline-white text-base px-6 py-3">
             <TreePine size={18} />

@@ -38,7 +38,7 @@ export default function MapPreview() {
             </p>
           </div>
           <Link
-            href="/explore/map"
+            href="/explore/reserves"
             className="hidden md:flex btn btn-secondary text-sm shrink-0 ml-6"
           >
             View Full Map
@@ -103,7 +103,7 @@ export default function MapPreview() {
 
         {/* Mobile CTA */}
         <div className="mt-6 md:hidden">
-          <Link href="/explore/map" className="btn btn-secondary w-full justify-center text-sm">
+          <Link href="/explore/reserves" className="btn btn-secondary w-full justify-center text-sm">
             Explore the Full Map
             <ArrowRight size={15} />
           </Link>

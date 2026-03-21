@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 const QUICK_LINKS = [
   { label: "Make a Reserve", href: "/get-involved/make-a-reserve", emoji: "🌱" },
   { label: "Volunteer Sign-up", href: "/get-involved/volunteer", emoji: "🤝" },
-  { label: "School Programs", href: "/get-involved/schools", emoji: "🏫" },
-  { label: "Corporate Partnerships", href: "/partner/corporate", emoji: "🌿" },
+  { label: "School Programs", href: "/partner/schools-veriserve", emoji: "🏫" },
+  { label: "Partnerships", href: "/partner", emoji: "🌿" },
   { label: "Press & Media", href: "/about/press", emoji: "📰" },
   { label: "Donate", href: "/give/donate", emoji: "💚" },
 ];

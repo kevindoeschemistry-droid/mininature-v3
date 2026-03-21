@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Wrench, ArrowRight, Leaf, Users, Heart, MapPin } from "lucide-react";
+import {
+  Wrench,
+  ArrowRight,
+  Leaf,
+  Users,
+  Heart,
+  MapPin,
+  Flower2,
+  Building2,
+  BookOpen,
+  Sprout,
+  Footprints,
+  Flame,
+  Compass,
+  CheckCircle,
+  Send,
+} from "lucide-react";
+import ServiceInquiryForm from "./ServiceInquiryForm";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -10,53 +26,116 @@ export const metadata: Metadata = {
 
 const SERVICES = [
   {
+    id: "landscaping",
+    icon: Flower2,
     emoji: "🌿",
     title: "Landscaping",
     description:
-      "Native plant design, installation, and maintenance for organizations, businesses, and public spaces — not private residences.",
-    href: "/services/landscaping",
+      "Professional native plant design, installation, and maintenance that transforms ordinary spaces into thriving habitats. Our landscaping services are for organizations, businesses, municipalities, and institutions — not private residences.",
+    offerings: [
+      "Custom native plant landscape design and site assessment",
+      "Professional installation with irrigation design",
+      "Fundraising support and grant application assistance",
+      "Community planting day event facilitation",
+      "Ongoing maintenance plans (monthly and quarterly)",
+      "Plant sourcing from local native nurseries",
+    ],
   },
   {
+    id: "municipalities",
+    icon: Building2,
     emoji: "🏛️",
     title: "For Municipalities",
     description:
-      "Public right-of-way plantings, park restoration, median beautification, and stormwater management with native plants.",
-    href: "/services/municipalities",
+      "Partner with local government to green public spaces using native plants. We design and install resilient landscapes for rights-of-way, parks, medians, and stormwater infrastructure that reduce maintenance costs and fight urban heat islands.",
+    offerings: [
+      "Right-of-way native plantings and beautification",
+      "Park restoration and habitat creation",
+      "Median and streetscape native landscaping",
+      "Stormwater bioswale and rain garden design",
+      "Urban heat island mitigation strategies",
+      "Public space pollinator habitat corridors",
+    ],
   },
   {
+    id: "education",
+    icon: BookOpen,
     emoji: "📚",
     title: "Educational Activities",
     description:
-      "Book a native plant walk, pollinator workshop, seed saving class, or community planting day for your group.",
-    href: "/services/education",
+      "Book engaging, hands-on environmental education experiences for your school, community group, or organization. Our programs connect people with Ventura County's native ecosystems through direct experience.",
+    offerings: [
+      "Guided native plant identification walks",
+      "Pollinator habitat and ecology workshops",
+      "Seed saving and propagation classes",
+      "School garden design and installation",
+      "Community planting day coordination",
+      "Youth conservation leadership programs",
+    ],
   },
   {
+    id: "horticulture",
+    icon: Sprout,
     emoji: "🌱",
-    title: "Contract Growing",
+    title: "Contract Growing & Horticulture",
     description:
-      "Professional native plant propagation, seed collection, and contract growing for restoration projects and landscapers.",
-    href: "/services/horticulture",
+      "Professional native plant propagation and contract growing for restoration projects, landscapers, and agencies. We grow locally sourced, genetically appropriate native plants for Ventura County ecosystems.",
+    offerings: [
+      "Contract growing of native species to specification",
+      "Seed collection from local wild populations",
+      "Native plant propagation and nursery services",
+      "Wholesale native plant supply for large projects",
+      "Custom species mixes for restoration sites",
+      "Consultation on plant sourcing and genetics",
+    ],
   },
   {
+    id: "trail-maintenance",
+    icon: Footprints,
     emoji: "🥾",
     title: "Trail Maintenance",
     description:
-      "Trail clearing, erosion control, native revegetation, and signage installation for Ventura County trails and public lands.",
-    href: "/services/trail-maintenance",
+      "Keep Ventura County's trails safe, accessible, and ecologically healthy. Our crews handle clearing, erosion control, revegetation, and signage installation for public lands and trail systems.",
+    offerings: [
+      "Trail clearing and brush management",
+      "Erosion control and drainage improvement",
+      "Native revegetation along trail corridors",
+      "Interpretive signage design and installation",
+      "Trailhead habitat restoration",
+      "Volunteer trail day coordination",
+    ],
   },
   {
+    id: "weed-abatement",
+    icon: Flame,
     emoji: "🔥",
     title: "Weed Abatement",
     description:
-      "Invasive species identification, removal, and native replanting — not just clear-cutting, but ecological restoration.",
-    href: "/services/weed-abatement",
+      "Invasive species management done right — not just clear-cutting, but ecological restoration. We remove invasive plants and replace them with native species that restore habitat, reduce fire risk, and prevent re-invasion.",
+    offerings: [
+      "Invasive species identification and mapping",
+      "Targeted removal with minimal site disturbance",
+      "Native replanting to prevent re-invasion",
+      "Fire risk reduction through native transition",
+      "Long-term management and monitoring plans",
+      "Compliance documentation and reporting",
+    ],
   },
   {
+    id: "consulting",
+    icon: Compass,
     emoji: "🧭",
     title: "Consulting",
     description:
-      "Expert guidance on habitat restoration planning, native plant palettes, grant writing, and biodiversity assessments.",
-    href: "/services/consulting",
+      "Expert guidance on habitat restoration planning, native plant palettes, grant writing, community engagement, and biodiversity assessments — grounded in Ventura County ecology and real-world project experience.",
+    offerings: [
+      "Habitat restoration planning and phased implementation",
+      "Native plant palette design for any site conditions",
+      "Grant writing support and funding strategy",
+      "Community engagement and outreach programs",
+      "Biodiversity assessments and species inventories",
+      "CEQA compliance and mitigation planning support",
+    ],
   },
 ];
 
@@ -109,36 +188,63 @@ export default function ServicesPage() {
               institutions. Every dollar earned funds our community conservation
               mission.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <a href="#inquiry" className="btn btn-primary">
               Request a Consultation <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Service Cards Grid */}
+      {/* Service Sections */}
       <section className="container-site py-16">
-        <h2 className="font-display font-bold text-2xl text-deep-forest mb-8">
+        <h2 className="font-display font-bold text-2xl text-deep-forest mb-12">
           What We Offer
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="card-organic bg-white p-6 border border-lichen-cream group hover:border-reserve-green/30 transition-colors"
+        <div className="space-y-12">
+          {SERVICES.map((service, index) => (
+            <div
+              key={service.id}
+              id={service.id}
+              className={`card-organic bg-white p-8 border border-lichen-cream ${
+                index % 2 === 1 ? "md:ml-8" : "md:mr-8"
+              }`}
             >
-              <span className="text-3xl block mb-3">{service.emoji}</span>
-              <h3 className="font-display font-semibold text-deep-forest text-lg mb-2 group-hover:text-reserve-green transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-sm text-forest-mid leading-relaxed mb-4">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-mint-mist rounded-full flex items-center justify-center shrink-0">
+                  <service.icon size={22} className="text-reserve-green" />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-deep-forest text-xl md:text-2xl">
+                    {service.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-sm text-forest-mid leading-relaxed mb-6">
                 {service.description}
               </p>
-              <span className="text-sm font-medium text-reserve-green flex items-center gap-1">
-                Learn more <ArrowRight size={13} />
-              </span>
-            </Link>
+              <div className="mb-6">
+                <p className="text-xs font-mono-accent uppercase tracking-widest text-sage mb-3">
+                  Key Offerings
+                </p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {service.offerings.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle
+                        size={14}
+                        className="text-reserve-green shrink-0 mt-0.5"
+                      />
+                      <span className="text-sm text-forest-mid">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <a
+                href="#inquiry"
+                className="inline-flex items-center gap-1 text-sm font-medium text-reserve-green hover:text-deep-forest transition-colors"
+              >
+                Inquire about {service.title} <ArrowRight size={13} />
+              </a>
+            </div>
           ))}
         </div>
       </section>
@@ -171,21 +277,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="bg-deep-forest text-white py-16">
-        <div className="container-site text-center max-w-2xl mx-auto">
-          <Wrench size={28} className="text-sage mx-auto mb-4" />
-          <h2 className="font-display font-bold text-2xl mb-4">
-            Ready to get started?
+      {/* Inquiry Form */}
+      <section id="inquiry" className="bg-deep-forest text-white py-16">
+        <div className="container-site max-w-2xl mx-auto">
+          <Send size={28} className="text-sage mx-auto mb-4" />
+          <h2 className="font-display font-bold text-2xl mb-2 text-center">
+            Request a Quote
           </h2>
-          <p className="text-sage leading-relaxed mb-6">
+          <p className="text-sage text-center mb-8">
             Tell us about your project and we&apos;ll connect you with the right
             team member. All service revenue funds our community conservation
             programs.
           </p>
-          <Link href="/contact" className="btn btn-primary">
-            Contact Us <ArrowRight size={14} />
-          </Link>
+          <ServiceInquiryForm />
         </div>
       </section>
     </div>

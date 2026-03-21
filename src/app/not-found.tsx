@@ -16,7 +16,7 @@ export default function NotFound() {
           <Link href="/" className="btn btn-secondary">
             Back to Home
           </Link>
-          <Link href="/explore/map" className="btn btn-outline">
+          <Link href="/explore/reserves" className="btn btn-outline">
             <TreePine size={15} />
             Find a Reserve
             <ArrowRight size={14} />

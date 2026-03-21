@@ -77,7 +77,7 @@ export default function HostInstallationPage() {
         <p className="text-forest-mid text-sm mb-8 max-w-xl">
           MNR installations are designed for organizations and public-facing spaces —
           <strong className="text-deep-forest"> not private homes</strong>. If you&apos;re a homeowner,
-          check out our <Link href="/services/landscaping" className="text-reserve-green underline hover:text-deep-forest transition-colors">landscaping services</Link> instead.
+          check out our <Link href="/services#landscaping" className="text-reserve-green underline hover:text-deep-forest transition-colors">landscaping services</Link> instead.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {WHO_CAN_HOST.map((h) => (
@@ -151,7 +151,7 @@ export default function HostInstallationPage() {
             Our MNR installations are for organizations, but we also offer full native landscaping
             services for residential properties.
           </p>
-          <Link href="/services/landscaping" className="btn btn-primary">
+          <Link href="/services#landscaping" className="btn btn-primary">
             View Landscaping Services <ArrowRight size={14} />
           </Link>
         </div>

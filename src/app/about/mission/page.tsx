@@ -106,13 +106,10 @@ export default function MissionPage() {
             with land and culture.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/about/native-plants" className="btn btn-secondary text-sm">
-              Why Native Plants? <ArrowRight size={14} />
+            <Link href="/about" className="btn btn-secondary text-sm">
+              About Us <ArrowRight size={14} />
             </Link>
-            <Link href="/about/history" className="btn btn-outline text-sm">
-              Our History <ArrowRight size={14} />
-            </Link>
-            <Link href="/explore/map" className="btn btn-outline text-sm">
+            <Link href="/explore/reserves" className="btn btn-outline text-sm">
               See the Network <ArrowRight size={14} />
             </Link>
           </div>

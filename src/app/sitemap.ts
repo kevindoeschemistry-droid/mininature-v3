@@ -32,18 +32,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const explore: MetadataRoute.Sitemap = [
     "",
     "reserves",
-    "map",
     "nurseries",
     "chapters",
     "programs",
     "events",
     "blog",
-    "stories",
-    "indigenous-knowledge",
   ].map((slug) => ({
     url: slug ? `${BASE_URL}/explore/${slug}` : `${BASE_URL}/explore`,
     lastModified: now,
-    changeFrequency: ["events", "blog", "stories"].includes(slug)
+    changeFrequency: ["events", "blog"].includes(slug)
       ? "weekly" as const
       : "monthly" as const,
     priority: slug === "" ? 0.9 : 0.7,
@@ -55,7 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "volunteer",
     "make-a-reserve",
     "start-a-chapter",
-    "schools",
     "training",
     "mnr-kit",
   ].map((slug) => ({
@@ -70,14 +66,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Partner section
   const partner: MetadataRoute.Sitemap = [
     "",
-    "corporate",
-    "municipal",
     "schools-veriserve",
     "sponsorship",
     "host-installation",
     "honorary-status",
     "one-percent",
-    "media",
     "other",
   ].map((slug) => ({
     url: slug ? `${BASE_URL}/partner/${slug}` : `${BASE_URL}/partner`,
@@ -89,13 +82,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Services section
   const services: MetadataRoute.Sitemap = [
     "",
-    "landscaping",
-    "horticulture",
-    "education",
-    "consulting",
-    "municipalities",
-    "trail-maintenance",
-    "weed-abatement",
   ].map((slug) => ({
     url: slug ? `${BASE_URL}/services/${slug}` : `${BASE_URL}/services`,
     lastModified: now,
@@ -112,7 +98,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "fund-new-mnr",
     "registry",
     "memorial",
-    "legacy",
   ].map((slug) => ({
     url: slug ? `${BASE_URL}/give/${slug}` : `${BASE_URL}/give`,
     lastModified: now,
@@ -123,9 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Stay Connected section
   const stayConnected: MetadataRoute.Sitemap = [
     "",
-    "newsletter",
-    "social",
-    "discord",
   ].map((slug) => ({
     url: slug
       ? `${BASE_URL}/stay-connected/${slug}`
@@ -139,10 +121,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const about: MetadataRoute.Sitemap = [
     "",
     "mission",
-    "history",
     "team",
     "impact",
-    "native-plants",
     "press",
   ].map((slug) => ({
     url: slug ? `${BASE_URL}/about/${slug}` : `${BASE_URL}/about`,

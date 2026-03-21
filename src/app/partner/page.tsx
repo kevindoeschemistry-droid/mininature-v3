@@ -16,7 +16,7 @@ const PARTNER_TYPES = [
     tagline: "Turn city land into urban habitat",
     description: "Partner with us to install reserves on city-owned land — medians, parkways, school grounds, park edges. We handle the design, installation, community engagement, and long-term stewardship.",
     benefits: ["Turnkey reserve installation", "Community engagement events", "Before/after documentation", "Biodiversity impact data"],
-    href: "/partner/municipal",
+    href: "/partner",
     color: "bg-reserve-green",
   },
   {
@@ -26,7 +26,7 @@ const PARTNER_TYPES = [
     tagline: "Meaningful environmental commitment",
     description: "Sponsor a reserve, fund an installation day, or name a site as part of your corporate giving program. We provide documentation and impact metrics for ESG reporting.",
     benefits: ["Named reserve opportunity", "Employee volunteer day", "ESG impact reporting", "Brand placement on site signage"],
-    href: "/partner/corporate",
+    href: "/partner",
     color: "bg-deep-forest",
   },
   {
@@ -36,7 +36,7 @@ const PARTNER_TYPES = [
     tagline: "Tell the story of urban nature",
     description: "Embed with a reserve installation, interview our indigenous knowledge partners, or feature a reserve steward story. We have rich visual content and compelling human stories ready.",
     benefits: ["Full media access to installs", "Expert sources & interviews", "High-res photo library", "B-roll footage available"],
-    href: "/partner/media",
+    href: "/about/press",
     color: "bg-california-poppy",
   },
 ];

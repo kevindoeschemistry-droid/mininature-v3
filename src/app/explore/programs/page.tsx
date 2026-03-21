@@ -38,7 +38,7 @@ const PROGRAMS = [
     description:
       "Bring living classrooms to K-12 campuses. We provide curriculum-aligned lesson plans, installation support, biodiversity tracking tools, and student volunteer coordination through ViviServe.",
     audience: "Teachers, administrators, school garden coordinators",
-    href: "/get-involved/schools",
+    href: "/partner/schools-veriserve",
     cta: "Bring to Your School",
   },
   {
@@ -49,7 +49,7 @@ const PROGRAMS = [
     description:
       "Developed in partnership with Chumash knowledge-keepers, this program offers workshops on traditional ecological practices, native plant uses, and indigenous land stewardship. Open to all.",
     audience: "Community members, students, educators, land stewards",
-    href: "/explore/indigenous-knowledge",
+    href: "/explore/programs",
     cta: "Explore Workshops",
   },
   {

@@ -26,9 +26,9 @@ export default function ReservesPage() {
             restored nature, built by community and sustained by care.
           </p>
           <div className="flex gap-3 mt-6">
-            <Link href="/explore/map" className="btn btn-primary text-sm">
+            <Link href="/explore/reserves" className="btn btn-primary text-sm">
               <MapPin size={15} />
-              View on Map
+              Browse Reserves
             </Link>
             <Link href="/get-involved/make-a-reserve" className="btn btn-outline-white text-sm">
               Make a Reserve

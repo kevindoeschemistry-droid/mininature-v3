@@ -44,7 +44,6 @@ export default function Footer() {
                 { label: "Find a Reserve", href: "/explore/reserves" },
                 { label: "Community Events", href: "/explore/events" },
                 { label: "Programs", href: "/explore/programs" },
-                { label: "Stories & News", href: "/explore/stories" },
                 { label: "Blog", href: "/explore/blog" },
               ].map((link) => (
                 <li key={link.href}>
@@ -86,8 +85,7 @@ export default function Footer() {
                 { label: "Run a Fundraiser", href: "/give/fundraisers" },
                 { label: "Fund a New MNR", href: "/give/fund-new-mnr" },
                 { label: "Registry", href: "/give/registry" },
-                { label: "Memorial Giving", href: "/give/memorial" },
-                { label: "Legacy Donation", href: "/give/legacy" },
+                { label: "Memorial & Legacy", href: "/give/memorial" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-lichen-cream hover:text-white transition-colors">
@@ -99,9 +97,7 @@ export default function Footer() {
             <h3 className="text-xs font-mono-accent font-medium uppercase tracking-widest text-sage mb-4">Services</h3>
             <ul className="space-y-2">
               {[
-                { label: "Landscaping", href: "/services/landscaping" },
-                { label: "For Municipalities", href: "/services/municipalities" },
-                { label: "Consulting", href: "/services/consulting" },
+                { label: "All Services", href: "/services" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-lichen-cream hover:text-white transition-colors">
@@ -133,9 +129,7 @@ export default function Footer() {
             <h3 className="text-xs font-mono-accent font-medium uppercase tracking-widest text-sage mb-4">Stay Connected</h3>
             <ul className="space-y-2">
               {[
-                { label: "Newsletter", href: "/stay-connected/newsletter" },
-                { label: "Discord", href: "/stay-connected/discord" },
-                { label: "Social Media", href: "/stay-connected/social" },
+                { label: "Stay Connected", href: "/stay-connected" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-lichen-cream hover:text-white transition-colors">
@@ -167,7 +161,7 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/shop" className="hover:text-white transition-colors">Shop</Link>
-            <Link href="/stay-connected/newsletter" className="hover:text-white transition-colors">Newsletter</Link>
+            <Link href="/stay-connected" className="hover:text-white transition-colors">Stay Connected</Link>
           </div>
         </div>
       </div>

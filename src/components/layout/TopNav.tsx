@@ -5,9 +5,8 @@ import Link from "next/link";
 import {
   Menu, X, ChevronDown, Search, MapPin, Users, Calendar, BookOpen, Leaf, TreePine,
   Heart, Building, Globe, ShoppingBag, Newspaper, PenLine, Package, Flag, GraduationCap,
-  Wrench, Landmark, BookOpenCheck, Scissors, HardHat, MessageSquare, Gift, ListChecks,
-  Ribbon, HeartHandshake, Mail, MessageCircle, Share2, Award, Handshake, School, Percent,
-  Sprout, FlowerIcon,
+  Wrench, BookOpenCheck, Scissors, HardHat, MessageSquare, ListChecks,
+  Ribbon, HeartHandshake, Mail, Award, Handshake, School, Percent,
 } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -20,7 +19,6 @@ const NAV_ITEMS = [
       { label: "Community Events", href: "/explore/events", icon: Calendar, desc: "Attend upcoming events" },
       { label: "Community Nurseries", href: "/explore/nurseries", icon: Leaf, desc: "Local native plant sources" },
       { label: "Programs", href: "/explore/programs", icon: BookOpenCheck, desc: "Our programs & initiatives" },
-      { label: "Stories & News", href: "/explore/stories", icon: Newspaper, desc: "News, press, and field notes" },
       { label: "Blog", href: "/explore/blog", icon: PenLine, desc: "Articles & reflections" },
     ],
   },
@@ -45,9 +43,7 @@ const NAV_ITEMS = [
       { label: "Schools on VeriServe", href: "/partner/schools-veriserve", icon: School, desc: "Get your school involved" },
       { label: "1% for the Planet", href: "/partner/one-percent", icon: Percent, desc: "Join the 1% commitment" },
       { label: "Other Partnerships", href: "/partner/other", icon: Globe, desc: "More ways to partner" },
-      { label: "Landscaping", href: "/services/landscaping", icon: Sprout, desc: "Design, install & maintain MNRs" },
-      { label: "For Municipalities", href: "/services/municipalities", icon: Landmark, desc: "City & public land services" },
-      { label: "All Services", href: "/services", icon: Wrench, desc: "Education, consulting & more" },
+      { label: "All Services", href: "/services", icon: Wrench, desc: "Landscaping, education, consulting & more" },
     ],
   },
   {
@@ -59,8 +55,7 @@ const NAV_ITEMS = [
       { label: "Run a Fundraiser", href: "/give/fundraisers", icon: Globe, desc: "Birthday, school, or workplace drive" },
       { label: "Fund a New MNR", href: "/give/fund-new-mnr", icon: TreePine, desc: "Help plant a new garden" },
       { label: "Registry", href: "/give/registry", icon: ListChecks, desc: "In-kind donation wishlist" },
-      { label: "Memorial Giving", href: "/give/memorial", icon: Ribbon, desc: "Honor a loved one" },
-      { label: "Legacy Donation", href: "/give/legacy", icon: Gift, desc: "Plan a lasting gift" },
+      { label: "Memorial & Legacy", href: "/give/memorial", icon: Ribbon, desc: "Honor a loved one or plan a lasting gift" },
     ],
   },
   {
@@ -71,9 +66,7 @@ const NAV_ITEMS = [
       { label: "Our Team", href: "/about/team", icon: Users, desc: "Staff, board & advisors" },
       { label: "Impact & Data", href: "/about/impact", icon: Globe, desc: "Metrics & outcomes" },
       { label: "Press & Media", href: "/about/press", icon: Newspaper, desc: "Press kit & media coverage" },
-      { label: "Newsletter", href: "/stay-connected/newsletter", icon: Mail, desc: "Monthly stories & updates" },
-      { label: "Discord", href: "/stay-connected/discord", icon: MessageCircle, desc: "Chat with the community" },
-      { label: "Social Media", href: "/stay-connected/social", icon: Share2, desc: "Follow us everywhere" },
+      { label: "Stay Connected", href: "/stay-connected", icon: Mail, desc: "Newsletter, Discord & social media" },
     ],
   },
 ];

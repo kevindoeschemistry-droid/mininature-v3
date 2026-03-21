@@ -224,7 +224,7 @@ export default function PressPage() {
                 Journalists and filmmakers are welcome to embed with our installation teams and
                 indigenous knowledge workshops.
               </p>
-              <Link href="/partner/media" className="btn btn-primary text-sm w-full justify-center">
+              <Link href="/about/press" className="btn btn-primary text-sm w-full justify-center">
                 Media Partnership <ArrowRight size={13} />
               </Link>
             </div>
