@@ -1,26 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --reserve-green: #1B4332;
+  --deep-forest: #0D2B1F;
+  --hummingbird-gold: #E8A838;
+  --california-poppy: #E86A2E;
+  --fog-white: #F5F3EE;
+  --lichen-cream: #EAE8E0;
+  --mint-mist: #E8F1EC;
+  --sage: #8FAF7E;
+  --forest-mid: #2D6A4F;
+  --adoptable: #52B788;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-reserve-green: #1B4332;
+  --color-deep-forest: #0D2B1F;
+  --color-forest-mid: #2D6A4F;
+  --color-hummingbird-gold: #E8A838;
+  --color-california-poppy: #E86A2E;
+  --color-sage: #8FAF7E;
+  --color-adoptable: #52B788;
+  --color-fog-white: #F5F3EE;
+  --color-lichen-cream: #EAE8E0;
+  --color-mint-mist: #E8F1EC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fog-white);
+  color: var(--deep-forest);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+.font-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-mono-accent {
+  font-family: "DM Mono", monospace;
+}
+
+/* Organic card */
+.card-organic {
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-organic:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary {
+  background-color: #E8A838;
+  color: #1B4332;
+  padding: 12px 28px;
+}
+.btn-primary:hover { background-color: #d4952e; transform: translateY(-1px); }
+
+.btn-secondary {
+  background-color: #1B4332;
+  color: white;
+  padding: 12px 28px;
+}
+.btn-secondary:hover { background-color: #0D2B1F; transform: translateY(-1px); }
+
+.btn-outline {
+  border: 2px solid #1B4332;
+  color: #1B4332;
+  padding: 10px 26px;
+  background: transparent;
+}
+.btn-outline:hover { background-color: #1B4332; color: white; }
+
+.btn-outline-white {
+  border: 2px solid rgba(255,255,255,0.7);
+  color: white;
+  padding: 10px 26px;
+  background: transparent;
+}
+.btn-outline-white:hover { background-color: rgba(255,255,255,0.15); }
+
+.btn-ghost {
+  color: #1B4332;
+  padding: 10px 20px;
+}
+.btn-ghost:hover { background-color: rgba(27, 67, 50, 0.08); }
+
+/* Section */
+.section-pad { padding: 80px 0; }
+.container-site { max-width: 1280px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+@media (min-width: 640px)  { .container-site { padding-left: 40px; padding-right: 40px; } }
+@media (min-width: 1024px) { .container-site { padding-left: 64px; padding-right: 64px; } }
+@media (min-width: 1280px) { .container-site { padding-left: 80px; padding-right: 80px; } }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge */
+.reserve-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Leaflet override */
+.leaflet-container {
+  font-family: "Inter", sans-serif;
+  z-index: 0; /* creates stacking context so Leaflet's internal z-indices stay contained */
+}
+
+/* Hummingbird hover animation */
+@keyframes hummingbird-hover {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-6px) rotate(3deg); }
+}
+.animate-hummingbird {
+  animation: hummingbird-hover 2.5s ease-in-out infinite;
+}
+
+/* Count up animation placeholder */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Staggered children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.stagger-children.visible > *:nth-child(1) { animation: fadeUp 0.5s 0.1s ease-out forwards; }
+.stagger-children.visible > *:nth-child(2) { animation: fadeUp 0.5s 0.2s ease-out forwards; }
+.stagger-children.visible > *:nth-child(3) { animation: fadeUp 0.5s 0.3s ease-out forwards; }
+.stagger-children.visible > *:nth-child(4) { animation: fadeUp 0.5s 0.4s ease-out forwards; }
+.stagger-children.visible > *:nth-child(5) { animation: fadeUp 0.5s 0.5s ease-out forwards; }

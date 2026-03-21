@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MiniNature Reserve — Platform Redesign v3
+
+A Next.js 15 + Tailwind CSS platform redesign for [MiniNature Reserve](https://www.mininature.org/).
+
+## Stack
+
+- **Framework**: Next.js 15 (App Router, Turbopack)
+- **Styling**: Tailwind CSS 4 + custom design tokens
+- **Map**: Leaflet.js (dynamic import, SSR-safe)
+- **Icons**: Lucide React
+- **Animation**: CSS keyframes + Intersection Observer count-up
+- **Fonts**: Playfair Display · Inter · DM Mono
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage — hero, impact bar, map preview, how-it-works, featured reserves |
+| `/explore` | Explore landing |
+| `/explore/map` | Full interactive map with filters + two-panel layout |
+| `/explore/reserves` | Reserve directory |
+| `/explore/reserves/[slug]` | Individual reserve profile page |
+| `/get-involved` | Get Involved landing |
+| `/get-involved/start-a-reserve` | ★ Primary growth page + application form |
+| `/support/donate` | Donation page with ecological amount presets |
+| `/about/mission` | Mission + What is an MNR |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design System
 
-## Learn More
+### Colors
+| Token | Hex | Use |
+|-------|-----|-----|
+| `reserve-green` | `#1B4332` | Primary base, nav, secondary CTAs |
+| `deep-forest` | `#0D2B1F` | Dark text, footer |
+| `hummingbird-gold` | `#E8A838` | Primary action CTA |
+| `california-poppy` | `#E86A2E` | Warm accent |
+| `sage` | `#8FAF7E` | Tertiary highlights |
+| `adoptable` | `#52B788` | Adoption status |
+| `fog-white` | `#F5F3EE` | Page background |
+| `mint-mist` | `#E8F1EC` | Section backgrounds |
+| `lichen-cream` | `#EAE8E0` | Card backgrounds |
 
-To learn more about Next.js, take a look at the following resources:
+### Buttons
+```html
+<button class="btn btn-primary">Gold pill — primary CTA</button>
+<button class="btn btn-secondary">Green pill — secondary CTA</button>
+<button class="btn btn-outline">Outlined pill</button>
+<button class="btn btn-outline-white">White outlined (dark bg)</button>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Cards
+```html
+<div class="card-organic">Rounded 24px card with hover lift</div>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Architecture
 
-## Deploy on Vercel
+```
+src/
+├── app/                          # Next.js App Router pages
+│   ├── page.tsx                  # Homepage
+│   ├── layout.tsx                # Root layout (Nav + Footer)
+│   ├── not-found.tsx
+│   ├── explore/
+│   │   ├── page.tsx
+│   │   ├── map/page.tsx + MapPageClient.tsx
+│   │   └── reserves/
+│   │       ├── page.tsx
+│   │       └── [slug]/page.tsx
+│   ├── get-involved/
+│   │   ├── page.tsx
+│   │   └── start-a-reserve/page.tsx
+│   ├── support/donate/page.tsx
+│   └── about/mission/page.tsx
+├── components/
+│   ├── layout/  TopNav.tsx · Footer.tsx
+│   ├── home/    HeroSection · ImpactBar · MapPreview · HowItWorks
+│   │            FeaturedReserves · PillarsSection · Testimonials · FinalCTA
+│   ├── map/     MiniMapEmbed.tsx (Leaflet, dynamic)
+│   └── ui/      ReserveCard.tsx · StatCounter.tsx
+├── lib/data.ts                   # Sample data
+└── types/index.ts                # TypeScript interfaces
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Phase Roadmap
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Phase 1 ✓ (This build)
+Navigation · Homepage · Map · Reserve profiles · Key conversion pages · Design system
+
+### Phase 2
+CMS integration (Sanity/Contentful) · Form backends · Events calendar · Indigenous knowledge page
+
+### Phase 3
+School/ViviServe leaderboard · Adopt-a-Square habitat grid · Biodiversity sighting logs · Before/after slider
+
+### Phase 4
+Volunteer accounts · Reserve health dashboards · Per-reserve fundraiser pages · Partner portal
