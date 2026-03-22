@@ -13,7 +13,7 @@ const PILLARS = [
     headline: "Reviving the Land with Native Plants",
     body: "From empty parkways to schoolyards, we transform neglected spaces into thriving MiniNature Reserves. Each reserve provides habitat for pollinators, wildlife, and future generations. Native plants require far less water, no pesticides, and actively restore the ecological web.",
     cta: "Why Native Plants?",
-    href: "/about",
+    href: "/about#native-plants",
     image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800",
     stat: "35,000+ sq ft restored",
   },

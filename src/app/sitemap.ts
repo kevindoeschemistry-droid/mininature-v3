@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://mininaturereserve.org";
+const BASE_URL = "https://www.mininature.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

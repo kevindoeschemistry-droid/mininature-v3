@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://mininaturereserve.org/sitemap.xml",
+    sitemap: "https://www.mininature.org/sitemap.xml",
   };
 }
